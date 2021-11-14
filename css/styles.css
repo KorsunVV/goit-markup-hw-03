@@ -191,7 +191,6 @@ img {
 
 .quality-list .flex-element {
     width: calc((100%-90px)/4);
-    background-color: cornflowerblue;
 }
 
 .quality-list .flex-element:not(:last-child) {
