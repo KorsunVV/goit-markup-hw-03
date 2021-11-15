@@ -15,6 +15,7 @@ body {
     font-family: Roboto, sans-serif;
     color: var(--primary-text-color);
     font-weight: 400;
+    margin: 0;
 }
 
 a {
@@ -27,7 +28,8 @@ button {
 }
 
 img {
-    height: 100%;
+    height: auto;
+    max-width: 100%;
 }
 
 .list {
@@ -59,6 +61,7 @@ img {
 
     /* цвет команды и фильтр кнопок #F5F4FA */
     --filter-color:#F5F4FA;
+
     /* цвет бордера */
     --border-color: #EEEEEE;
 }
@@ -74,9 +77,13 @@ img {
     padding-top: 94px;
 }
 
+.sec-padding {
+    padding-top: 0;
+}
+
 /* nav */
 .header {
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid #ECECEC;
 }
 
 .header .container {
@@ -143,6 +150,7 @@ img {
 
 /* header contact */
 .header-contact {
+    font-size: 14px;
     display: flex;
     margin-left: auto;
 }
@@ -155,6 +163,8 @@ img {
 .hero {
     background-color: var(--foot-color);
     color: var(--bg-nav-color);
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 
 .hero .container {
@@ -190,7 +200,7 @@ img {
 }
 
 .quality-list .flex-element {
-    width: calc((100%-90px)/4);
+    width: calc((100% - 90px) / 4);
 }
 
 .quality-list .flex-element:not(:last-child) {
@@ -228,7 +238,7 @@ img {
 }
 
 .doing-list .flex-element {
-    width: calc((100%-60px)/3);
+    width: calc((100% - 60px) / 3);
 }
 
 .doing-list .flex-element:not(:last-child) {
@@ -249,7 +259,7 @@ img {
 }
 
 .our-team .flex-element {
-    width: calc((100%-90px)/4);
+    width: calc((100% - 90px)  4);
 }
 
 .our-team .flex-element:not(:last-child) {
@@ -264,11 +274,17 @@ img {
     margin-bottom: 50px;
 }
 
+.our-team .info-personal {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
 .our-team .list-title {
     font-weight: 500;
     color: var(--title-text-color);
     font-size: 16px;
     line-height: 1.18;
+    padding-bottom: 10px;
 }
 
 .our-team .list-text {
@@ -279,9 +295,6 @@ img {
 /* Подвал */
 .footer {
     background-color: var(--foot-color);
-}
-
-.footer .container {
     padding: 60px 15px;
 }
 
@@ -297,6 +310,10 @@ img {
 
 .footer .list {
     font-style: normal;
+}
+
+.footer-item:not(:last-child) {
+    margin-bottom: 9px;
 }
 
 .footer .list-text {
@@ -321,10 +338,21 @@ img {
     padding-left: 15px;
 }
 
-.filters .list {
+.projects .filters {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
+}
+
+.filters .flex-element {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(26 / 16);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
 }
 
 .filters .button {
@@ -332,52 +360,58 @@ img {
     font-weight: bold;
     font-size: 16px;
     line-height: 1.625;
-    margin: 22px 6px;
     align-items: center;
+    padding: 6px 22px;
 }
 
 .filters .flex-element:not(:last-child) {
-    margin-right: 30px;
+    margin-right: 9px;
+}
+
+.filters button {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.625;
+    align-items: center;
 }
 
 .filters button:hover, .filters button:focus {
     color: var(--bg-nav-color);
     background-color: var(--accent-color);
-    border: 2px solid transparent;
+    border: 1px solid transparent;
+    border-radius: 4px;
 }
 
 /* ПроектЫ */
 
-.projects .list {
+.projects .list-project {
     display: flex;
     flex-wrap: wrap;
     margin: -15px;
-    
 }
-.projects .flex-element{
+
+.projects .flex-element-project {
     width: 370px;
     margin: 15px;
-    border-bottom: 1px solid var(--border-color);
 }
+
 .projects .section-title {
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    margin-left: 24px;
 }
 
+.info-project {
+    padding: 20px 24px;
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
+}
 .project-text {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.87;
-    margin-bottom: 20px;
-    margin-left: 24px;
 }
-
-.projects img {
-    height: 294px;
-}
-
